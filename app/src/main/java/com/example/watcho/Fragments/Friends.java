@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.watcho.AddFriends;
 import com.example.watcho.InviteFriends;
 import com.example.watcho.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -92,7 +93,11 @@ public class Friends extends Fragment {
         });
 
         Button invite_frnds;
+        Button add_frnds;
+
         invite_frnds = view.findViewById(R.id.btn_invite);
+        add_frnds = view.findViewById(R.id.btn_add);
+
         invite_frnds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,6 +106,13 @@ public class Friends extends Fragment {
             }
         });
 
+        add_frnds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), AddFriends.class);
+                startActivity(i);
+            }
+        });
 
         return view;
     }
