@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/select_item"
+        app:itemTextColor="@drawable/select_item"
+        app:menu="@menu/menu_bot_nav" />
+    <TextView
+        android:id="@+id/text_watcho_plays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/text_plays"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_view_plays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_watcho_plays"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/p_1"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/h_1" />
+
+            <ImageView
+                android:id="@+id/p_2"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/h_2" />
+
+            <ImageView
+                android:id="@+id/p_3"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/h_3" />
+
+            <ImageView
+                android:id="@+id/p_4"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/h_4" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/text_watcho_channels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_view_plays"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/text_plays"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_view_channels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_watcho_channels"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/c_1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/c_1" />
+
+            <ImageView
+                android:id="@+id/c_2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/c_2" />
+
+            <ImageView
+                android:id="@+id/c_3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/c_3" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/text_dish_auditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_view_channels"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/text_dish_auditions"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_view_auditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_dish_auditions"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/a_1"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/h_1" />
+
+            <ImageView
+                android:id="@+id/a_2"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/h_2" />
+
+            <ImageView
+                android:id="@+id/a_3"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/h_3" />
+
+            <ImageView
+                android:id="@+id/a_4"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/h_4" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/text_watcho_creators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_view_auditions"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/text_creators"
+        android:textAllCaps="false"
+        android:textColor="@color/grey"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_view_creators"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_watcho_creators"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/cr_1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/p_1" />
+
+            <ImageView
+                android:id="@+id/cr_2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/p_2" />
+
+            <ImageView
+                android:id="@+id/cr_3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/p_3" />
+
+            <ImageView
+                android:id="@+id/cr_4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:contentDescription="@string/top_10_shows"
+                android:scaleType="fitStart"
+                android:src="@drawable/p_4" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>
