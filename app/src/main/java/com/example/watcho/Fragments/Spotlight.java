@@ -1,14 +1,27 @@
 package com.example.watcho.Fragments;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.watcho.R;
+import com.example.watcho.ShowingReviews;
+import com.example.watcho.Videoview;
+
+import java.io.File;
+
+import static android.app.Activity.RESULT_OK;
 
 
 /**
@@ -21,6 +34,9 @@ public class Spotlight extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    Button addVideo;
+    int SELECT_VIDEO_REQUEST=100;
+    String selectedVideoPath;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -56,6 +72,67 @@ public class Spotlight extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        addVideo=view.findViewById(R.id.add_video);
+
+        addVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addVideoM();
+            }
+        });
+        
+    }
+
+    private void addVideoM() {
+        Intent intent;
+        if(android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED))
+        {
+            intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
+        }
+        else
+        {
+            intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Video.Media.INTERNAL_CONTENT_URI);
+        }
+        intent.setType("video/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        intent.putExtra("return-data", true);
+        startActivityForResult(intent,SELECT_VIDEO_REQUEST);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        try {
+            if (resultCode == RESULT_OK) {
+                if (requestCode == SELECT_VIDEO_REQUEST) {
+                    Uri selectedvideo = data.getData();
+                    String videopath = selectedvideo.getPath();
+                    File file = new File(videopath);
+                    Log.i("path",file.getAbsolutePath());
+                    openDialogThanks();
+                }
+            }
+
+        }catch (Exception e){
+            Log.i("error",e.toString());
+        }
+    }
+
+    public void openDialogThanks() {
+
+        final Dialog dialog = new Dialog(getContext());
+        dialog.setContentView(R.layout.custom_dialog_video_add);
+
+        dialog.show();
+    }
+
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
