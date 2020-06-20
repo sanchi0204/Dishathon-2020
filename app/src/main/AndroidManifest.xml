@@ -46,7 +46,8 @@
         <activity android:name=".More" />
         <activity android:name=".Search" />
         <activity android:name=".Browse" />
-        <activity android:name=".Downloads" />
+        <activity android:name=".Downloads"
+            android:resizeableActivity="true"/>
     </application>
 
 </manifest>
