@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/pay"
+        android:icon="@drawable/rupee"
+        android:orderInCategory="100"
+        android:title="@string/buy"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/broadcast"
+        android:icon="@drawable/cast"
+        android:orderInCategory="200"
+        android:title="@string/cast"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/user"
+        android:icon="@drawable/user"
+        android:orderInCategory="400"
+        android:title="@string/user"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">Watcho</string>
+    <string name="top_10_shows">Top 10 Shows on Watcho</string>
+    <string name="text_watcho_originals">Watcho Originals</string>
+    <string name="watcho_spotlight">Watcho Spotlight</string>
+    <string name="text_musical_videos">Watcho Musical Videos</string>
+    <string name="text_trailers">Bollywood Movie Trailers</string>
+    <string name="text_plays">Watcho Plays</string>
+    <string name="text_dish_auditions">Dish TV Auditions</string>
+    <string name="home">Home</string>
+    <string name="downloads">Downloads</string>
+    <string name="browse">Browse</string>
+    <string name="search">Search</string>
+    <string name="more">More</string>
+    <string name="text_creators">Watcho Creators</string>
+    <string name="review">Review</string>
+    <string name="congrats">Congratulations!</string>
+    <string name="you_earned">You earned a coin</string>
+    <string name="add_a_review">Rate or Review to earn more.</string>
+    <string name="thanku">Thank you</string>
+    <string name="we_value">We value your reviews</string>
+    <string name="rate">RATE</string>
+    <string name="cancel">@android:string/cancel</string>
+    <string name="submit">SUBMIT</string>
+    <string name="action">Action</string>
+    <string name="biopic">Biopic</string>
+    <string name="chat_shows">Chat Shows</string>
+    <string name="comedy">Comedy</string>
+    <string name="crime">Crime</string>
+    <string name="documentary">Documentary</string>
+    <string name="drama">Drama</string>
+    <string name="family">Family</string>
+    <string name="horror">Horror</string>
+    <string name="kids">Kids</string>
+    <string name="lifestyle">Lifestyle</string>
+    <string name="reality">Reality</string>
+    <string name="romance">Romance</string>
+    <string name="science">Science</string>
+    <string name="sports">Sports</string>
+    <string name="thriller">Thriller</string>
+    <string name="vlog">Vlog</string>
+    <string name="genre">Genre</string>
+    <string name="language">Language</string>
+    <string name="hindi">Hindi</string>
+    <string name="english">English</string>
+    <string name="tamil">Tamil</string>
+    <string name="kannada">Kannada</string>
+    <string name="sms_msg">Download the Watcho App now to watch quality shows and showcase your talent.
+    \n Use code WATCHO1234 to join and earn coins.</string>
+
+
+    <string-array name="pop_shows">
+        <item>Ardhsatya</item>
+        <item>Baal Baal Bache</item>
+        <item>Chhoriyan</item>
+        <item>Dark Destinations</item>
+        <item>Four Thieves</item>
+        <item>Girl Tribe</item>
+        <item>Its my pleasure</item>
+        <item>Jokeistan</item>
+        <item>Love Crisis</item>
+        <item>Release</item>
+        <item>Sentimentals</item>
+        <item>Sinderella</item>
+        <item>The Mortuary</item>
+        <item>What the Folks</item>
+
+
+    </string-array>
+
+
+    <string name="premium">Premium</string>
+    <string name="shows">Shows</string>
+    <string name="channels">Channels</string>
+    <string name="news">News</string>
+    <string name="spotlight">Spotlight</string>
+    <string name="customer_support">Customer Support</string>
+    <string name="friends">My Friends</string>
+    <string name="nothing_to_show">Nothing to Show</string>
+    <string name="download_fav">Download shows to watch them offline</string>
+    <string name="buy">Buy Premium</string>
+    <string name="cast">Broadcast</string>
+    <string name="user">User</string>
+    <string name="pay_premium">Pay for Premium content</string>
+    <string name="ott">OTT</string>
+    <string name="user_login">User Login</string>
+    <string name="split_screen">Split Screen</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="four_thieves">4 Thieves</string>
+    <string name="invite_frnds">Invite Friends</string>
+    <string name="cont_num">Contact Number</string>
+    <string name="select_cont">Select Contacts</string>
+    <string name="enter_count">Enter Count</string>
+    <string name="send_sms">SMS</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="invite_">Invite</string>
+    <string name="invite_1">Invite your friends and earn coins</string>
+    <string name="add_video">Add Video</string>
+
+</resources>
