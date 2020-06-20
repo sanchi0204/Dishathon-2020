@@ -3,12 +3,22 @@ package com.example.watcho.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
+import com.example.watcho.Adapters.CustomerAdapter;
+import com.example.watcho.Adapters.RoomAdapter;
 import com.example.watcho.R;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,7 +69,39 @@ public class MyRoom extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_room, container, false);
+        View view =  inflater.inflate(R.layout.fragment_my_room, container, false);
+
+
+        final RecyclerView room_list;
+        final ArrayList Message;
+        final EditText enter_msg;
+        Button send_msg;
+
+        Message = new ArrayList<>(Arrays.asList("You should watch The sentimentals. Its a good show",
+                "I am awaiting new episodes of Four Thieves", "Me too.When will the new season come?"));
+
+        room_list = view.findViewById(R.id.list_room);
+        enter_msg = view.findViewById(R.id.enter_msg);
+        send_msg = view.findViewById(R.id.btn_send);
+
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Objects.requireNonNull(getActivity()).getApplicationContext());
+        room_list.setLayoutManager(linearLayoutManager);
+
+        final RoomAdapter roomAdapter = new RoomAdapter(Message,getContext());
+        room_list.setAdapter(roomAdapter);
+
+        send_msg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String msg = enter_msg.getText().toString();
+                Message.add(msg);
+                roomAdapter.notifyDataSetChanged();
+            }
+        });
+
+
+        return view;
     }
 }

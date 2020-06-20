@@ -47,6 +47,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.MyView
 
         holder.name.setText(Name.get(position).toString());
         holder.ques.setText(Ques.get(position).toString());
+        holder.ans.setText(Ans.get(position).toString());
         // implement setOnClickListener event on item view.
         holder.ques.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -118,6 +118,8 @@
     <string name="q_2">Video is not playing, only black screen is displaying with the audio</string>
     <string name="q_3">Paid for subscription but the content is not playing</string>
     <string name="q_4"> </string>
+    <string name="write_msg">Write your message here</string>
+    <string name="send">Send</string>
 
 
 </resources>
