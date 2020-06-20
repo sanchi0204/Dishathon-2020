@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.example.watcho.Adapters.CustomerAdapter;
 import com.example.watcho.Adapters.RoomAdapter;
@@ -75,7 +76,7 @@ public class MyRoom extends Fragment {
         final RecyclerView room_list;
         final ArrayList Message;
         final EditText enter_msg;
-        Button send_msg;
+        ImageButton send_msg;
 
         Message = new ArrayList<>(Arrays.asList("You should watch The sentimentals. Its a good show",
                 "I am awaiting new episodes of Four Thieves", "Me too.When will the new season come?"));

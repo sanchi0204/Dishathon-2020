@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,7 +24,7 @@ import java.util.Locale;
 
 public class Search extends AppCompatActivity {
 
-ImageView mic;
+ImageView mic,sort;
     AutoCompleteTextView text;
 
 Context context = this;
@@ -74,26 +75,41 @@ Context context = this;
         });
 
         mic = findViewById(R.id.mic);
+        sort = findViewById(R.id.sort);
+
         mic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SpeechToText(view);
             }
         });
+
+        sort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Sort();
+            }
+        });
+    }
+
+    private void Sort() {
+
+
+            final Dialog dialog = new Dialog(context);
+            dialog.setContentView(R.layout.chip_layout);
+            Button dialogButton = dialog.findViewById(R.id.btn_sort);
+            // if button is clicked, close the custom dialog
+            dialogButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+            dialog.show();
     }
 
     private void SpeechToText(View view) {
-//        final Dialog dialog = new Dialog(context);
-//        dialog.setContentView(R.layout.chip_layout);
-//      //  Button dialogButton = dialog.findViewById(R.id.btn_rate);
-//        // if button is clicked, close the custom dialog
-////        dialogButton.setOnClickListener(new View.OnClickListener() {
-////            @Override
-////            public void onClick(View v) {
-////                dialog.dismiss();
-////            }
-////        });
-//        dialog.show();
+
 
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);

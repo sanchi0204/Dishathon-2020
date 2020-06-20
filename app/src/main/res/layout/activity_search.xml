@@ -51,6 +51,7 @@
         />
 
     <ImageView
+        android:id="@+id/mic"
         android:layout_weight="0"
         android:contentDescription="@string/search"
         android:layout_width="30dp"
@@ -58,12 +59,12 @@
         android:layout_marginEnd="20dp"
         android:layout_gravity="center_vertical"
         android:background="@android:color/transparent"
-        android:src="@drawable/search" />
+        android:src="@drawable/mic" />
 
 </LinearLayout>
 
         <ImageView
-            android:id="@+id/mic"
+            android:id="@+id/sort"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
@@ -73,7 +74,8 @@
             android:layout_marginEnd="16dp"
             android:layout_weight="0"
             android:contentDescription="@string/search"
-            android:src="@drawable/mic" />
+            android:src="@drawable/sort" />
+
     </LinearLayout>
     <TextView
         android:id="@+id/text_view_shows"

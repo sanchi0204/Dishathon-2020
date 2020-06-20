@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="horizontal"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile"
+            android:id="@+id/user_img"/>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/user_img"
+            android:layout_marginStart="16dp"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textStyle="italic"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/user_name"
+            android:layout_toEndOf="@+id/user_img"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g1"
+                android:text="English"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:background="@drawable/curve_yellow"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g2"
+                android:text="Thrill"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/curve_yellow"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/g3"
+                android:text="Comic"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/curve_yellow"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
