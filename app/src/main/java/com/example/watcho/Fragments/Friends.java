@@ -91,34 +91,47 @@ public class Friends extends Fragment {
 //            }
 //        });
         View view =  inflater.inflate(R.layout.fragment_friends, container, false);
+        final ArrayList Name;
+        final ArrayList gen1;
+        final ArrayList gen2;
+        final ArrayList gen3;
+
 
         RecyclerView frnd_list;
-            FriendList friendList = new FriendList();
-        assert friendList != null;
-        int length = friendList.getName().size();
+//            FriendList friendList = new FriendList();
+//        assert friendList != null;
+//        int length = friendList.getName().size();
+//
+//        ArrayList<String> name = new ArrayList<>(length);
+//        ArrayList<String> gen1 = new ArrayList<>(length);
+//        ArrayList<String> gen2 = new ArrayList<String>(length);
+//        ArrayList<String> gen3 = new ArrayList<String>(length);
+//
+//
+//   for(int i=0;i<length;i++)
+//   {
+//       name.add(i,friendList.getName(i));
+//       gen1.add(i,friendList.getGen1(i));
+//       gen2.add(i,friendList.getGen2(i));
+//       gen3.add(i,friendList.getGen3(i));
+//
+//   }
 
-        ArrayList<String> name = new ArrayList<String>(length);
-        ArrayList<String> gen1 = new ArrayList<String>(length);
-        ArrayList<String> gen2 = new ArrayList<String>(length);
-        ArrayList<String> gen3 = new ArrayList<String>(length);
-
-
-   for(int i=0;i<length;i++)
-   {
-       name.add(i,friendList.getName(i));
-       gen1.add(i,friendList.getGen1(i));
-       gen2.add(i,friendList.getGen2(i));
-       gen3.add(i,friendList.getGen3(i));
-
-   }
-
+        Name = new ArrayList<>(Arrays.asList("Pranay K.",
+                "Shreya Singh", "Sameer Khan"));
+        gen1 = new ArrayList<>(Arrays.asList("English",
+                "Life", "Science"));
+        gen2 = new ArrayList<>(Arrays.asList("Kannada",
+                "Vlog", "Documentary"));
+        gen3 = new ArrayList<>(Arrays.asList("Tamil",
+                "Drama", "Thrill"));
         frnd_list = view.findViewById(R.id.recycler_friends);
 
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Objects.requireNonNull(getActivity()).getApplicationContext());
         frnd_list.setLayoutManager(linearLayoutManager);
 
-        final FriendListAdapter friendListAdapter = new FriendListAdapter(name,gen1, gen2,gen3, getContext());
+        final FriendListAdapter friendListAdapter = new FriendListAdapter(Name,gen1, gen2,gen3, getContext());
         frnd_list.setAdapter(friendListAdapter);
 
 
@@ -139,6 +152,11 @@ public class Friends extends Fragment {
         add_frnds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Name.add("Radhika Bawa");
+                gen1.add("English");
+                gen2.add("Comic");
+                gen3.add("Vlog");
+                friendListAdapter.notifyDataSetChanged();
                 Intent i = new Intent(getContext(), AddFriends.class);
                 startActivity(i);
             }

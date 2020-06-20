@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.watcho.Adapters.CustomerAdapter;
 import com.example.watcho.Adapters.RoomAdapter;
@@ -99,6 +100,8 @@ public class MyRoom extends Fragment {
                 String msg = enter_msg.getText().toString();
                 Message.add(msg);
                 roomAdapter.notifyDataSetChanged();
+                enter_msg.setText(" ");
+                Toast.makeText(getContext(), "Message sent", Toast.LENGTH_SHORT).show();
             }
         });
 

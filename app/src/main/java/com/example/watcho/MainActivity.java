@@ -106,14 +106,16 @@ public class MainActivity extends AppCompatActivity {
     private void SplitScreen() {
 
 
-        Intent i = new Intent(MainActivity.this, Downloads.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_LAUNCH_ADJACENT|
-                Intent.FLAG_ACTIVITY_MULTIPLE_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
+//        Intent i = new Intent(MainActivity.this, Downloads.class);
+//        i.addFlags(Intent.FLAG_ACTIVITY_LAUNCH_ADJACENT|
+//                Intent.FLAG_ACTIVITY_MULTIPLE_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
+//
+//        Rect rect = new Rect(0,0,100,100);
+//        ActivityOptions activityOptions = ActivityOptions.makeBasic();
+//        ActivityOptions bounds = activityOptions.setLaunchBounds(rect);
+//        startActivity(i);
 
-        Rect rect = new Rect(0,0,100,100);
-        ActivityOptions activityOptions = ActivityOptions.makeBasic();
-        ActivityOptions bounds = activityOptions.setLaunchBounds(rect);
-        startActivity(i);
+        Toast.makeText(this, "Split Screen", Toast.LENGTH_SHORT).show();
     }
 
 

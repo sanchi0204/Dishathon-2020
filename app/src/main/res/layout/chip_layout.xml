@@ -1,200 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="500dp"
     android:background="@color/black"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+
 <TextView
+    android:id="@+id/l1"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
     android:layout_marginTop="10dp"
     android:text="@string/genre"
-    android:textColor="@color/white"
+    android:textColor="@color/colorAccent"
     android:textSize="20sp"
     android:textStyle="normal"
+    android:fontFamily="@font/roboto_medium"
     />
 
-    <com.google.android.material.chip.ChipGroup
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_below="@+id/l1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+       >
+        <CheckBox
+          android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"
+           />
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/biopic"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chat_shows"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l3"
+        android:layout_below="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        >
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comedy"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crime"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
+
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/documentary"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l4"
+        android:layout_below="@+id/l3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         >
 
-        <com.google.android.material.chip.Chip
+        <CheckBox
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/action"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
+            android:text="@string/drama"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
 
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/biopic"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/chat_shows"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/comedy"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/crime"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/documentary"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-           android:text="@string/drama"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
-
-        <com.google.android.material.chip.Chip
+        <CheckBox
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/family"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
 
-        <com.google.android.material.chip.Chip
+        <CheckBox
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/horror"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
+    </LinearLayout>
 
-        <com.google.android.material.chip.Chip
+    <LinearLayout
+        android:id="@+id/l5"
+        android:layout_below="@+id/l4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        >
+        <CheckBox
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/kids"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
 
-        <com.google.android.material.chip.Chip
+        <CheckBox
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lifestyle"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
 
-        <com.google.android.material.chip.Chip
+        <CheckBox
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/reality"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
+    </LinearLayout>
 
-        <com.google.android.material.chip.Chip
+        <LinearLayout
+            android:id="@+id/l6"
+            android:layout_below="@+id/l5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            >
+
+        <CheckBox
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/romance"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
 
-        <com.google.android.material.chip.Chip
+        <CheckBox
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-          android:text="@string/science"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
+            android:text="@string/science"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
 
-        <com.google.android.material.chip.Chip
+        <CheckBox
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sports"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
+        </LinearLayout>
 
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/thriller"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
-
-        <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/vlog"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            app:chipBackgroundColor="@color/white"/>
-
-    </com.google.android.material.chip.ChipGroup>
 
     <TextView
+        android:id="@+id/l7"
+        android:layout_below="@+id/l6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:text="@string/language"
-        android:textColor="@color/white"
+        android:textColor="@color/colorAccent"
         android:textSize="20sp"
         android:textStyle="normal"
+        android:fontFamily="@font/roboto_medium"
         />
 
-    <com.google.android.material.chip.ChipGroup
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/l8"
+        android:layout_below="@+id/l7"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:orientation="horizontal"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         >
 
-    <com.google.android.material.chip.Chip
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:text="@string/hindi"
-        style="@style/Widget.MaterialComponents.Chip.Choice"
-        app:chipBackgroundColor="@color/white"/>
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hindi"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
 
-    <com.google.android.material.chip.Chip
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:text="@string/english"
-        style="@style/Widget.MaterialComponents.Chip.Choice"
-        app:chipBackgroundColor="@color/white"/>
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/english"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
 
-    <com.google.android.material.chip.Chip
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tamil"
-        style="@style/Widget.MaterialComponents.Chip.Choice"
-        app:chipBackgroundColor="@color/white"/>
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tamil"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
 
-    <com.google.android.material.chip.Chip
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/kannada"
-        style="@style/Widget.MaterialComponents.Chip.Choice"
-        app:chipBackgroundColor="@color/white"/>
-    </com.google.android.material.chip.ChipGroup>
+        <CheckBox
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kannada"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:buttonTint="@color/yellow"/>
+    </LinearLayout>
 
     <Button
+        android:layout_alignParentBottom="true"
         android:id="@+id/btn_sort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -205,6 +288,7 @@
         android:text="@string/sort"
         android:textStyle="normal"
         android:textSize="20sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        android:layout_marginBottom="30dp"
         android:textAllCaps="true"/>
-</LinearLayout>
+</RelativeLayout>
