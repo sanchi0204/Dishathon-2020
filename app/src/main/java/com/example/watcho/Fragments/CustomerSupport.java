@@ -3,12 +3,21 @@ package com.example.watcho.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
+import com.example.watcho.Adapters.CustomerAdapter;
 import com.example.watcho.R;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,7 +68,51 @@ public class CustomerSupport extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_customer_support, container, false);
+        View view =  inflater.inflate(R.layout.fragment_customer_support, container, false);
+
+
+        RecyclerView cust_query;
+        final ArrayList Name;
+        final ArrayList Ques;
+        final ArrayList Ans;
+        final EditText enter_query;
+        Button add_query;
+
+        Name = new ArrayList<>(Arrays.asList("Radhika Bawa",
+                "Jayansh Jain", "Vihan Bhalla"));
+
+        Ques = new ArrayList<>(Arrays.asList("Unable to play content in our region.",
+                "Video is not playing, only black screen is displaying with the audio",
+                "Paid for subscription but the content is not playing"));
+
+        Ans = new ArrayList<>(Arrays.asList("The content is geo-restricted and available only in India.",
+               "We have ABR enabled on Watcho, due to bandwidth it auto-adjusts and play only audio. Please connect with Wifi or use the application in better network reception",
+                "It takes couple of minutes for the system to process and enable the entitlements."));
+
+        cust_query = view.findViewById(R.id.list_cust);
+        enter_query = view.findViewById(R.id.enter_item);
+        add_query = view.findViewById(R.id.btn_add);
+
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Objects.requireNonNull(getActivity()).getApplicationContext());
+        cust_query.setLayoutManager(linearLayoutManager);
+
+        final CustomerAdapter customerAdapter = new CustomerAdapter(Name,Ques, Ans, getContext());
+        cust_query.setAdapter(customerAdapter);
+
+        add_query.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String ques = enter_query.getText().toString();
+                Ques.add(ques);
+                Name.add("User");
+                Ans.add(" ");
+                customerAdapter.notifyDataSetChanged();
+            }
+        });
+
+
+        return view;
     }
 }

@@ -85,6 +85,7 @@
     <string name="ott">OTT</string>
     <string name="user_login">User Login</string>
     <string name="split_screen">Split Screen</string>
+    <string name="my_room">My Room</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -100,5 +101,23 @@
     <string name="add_video">Add Video</string>
     <string name="change_lang">Change Language</string>
     <string name="see_what">See what others have to say!</string>
+    <string name="enter_query">Enter your query here</string>
+    <string name="add">Add</string>
+
+    <string name="user_1">Radhika Bawa</string>
+    <string name="user_2">Jayansh Jain</string>
+    <string name="user_3">Vihan Bhalla</string>
+    <string name="user_4">User</string>
+
+    <string name="ans_1">The content is geo-restricted and available only in India.</string>
+    <string name="ans_2">We have ABR enabled on Watcho, due to bandwidth it auto-adjusts and play only audio. Please connect with Wifi or use the application in better network reception</string>
+    <string name="ans_3"> It takes couple of minutes for the system to process and enable the entitlements.</string>
+    <string name="ans_4"> </string>
+
+    <string name="q_1">Unable to play content in our region.</string>
+    <string name="q_2">Video is not playing, only black screen is displaying with the audio</string>
+    <string name="q_3">Paid for subscription but the content is not playing</string>
+    <string name="q_4"> </string>
+
 
 </resources>

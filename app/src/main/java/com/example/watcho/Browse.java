@@ -12,10 +12,10 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-
 import com.example.watcho.Fragments.Channels;
 import com.example.watcho.Fragments.CustomerSupport;
 import com.example.watcho.Fragments.Friends;
+import com.example.watcho.Fragments.MyRoom;
 import com.example.watcho.Fragments.News;
 import com.example.watcho.Fragments.Premium;
 import com.example.watcho.Fragments.Shows;
@@ -39,6 +39,7 @@ public class Browse extends AppCompatActivity {
     private Spotlight spotlight;
     private CustomerSupport customerSupport;
     private Friends friends;
+    private MyRoom myRoom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +96,7 @@ public class Browse extends AppCompatActivity {
         spotlight = new Spotlight();
         customerSupport = new CustomerSupport();
         friends = new Friends();
+        myRoom = new MyRoom();
 
         tabLayout.setupWithViewPager(viewPager);
 
@@ -103,6 +105,7 @@ public class Browse extends AppCompatActivity {
         viewPagerAdapter.addFragment(premium, getString(R.string.premium));
         viewPagerAdapter.addFragment(shows, getString(R.string.shows));
         viewPagerAdapter.addFragment(friends, getString(R.string.friends));
+        viewPagerAdapter.addFragment(myRoom, getString(R.string.my_room));
         viewPagerAdapter.addFragment(channels, getString(R.string.channels));
         viewPagerAdapter.addFragment(spotlight, getString(R.string.spotlight));
         viewPagerAdapter.addFragment(news, getString(R.string.news));
