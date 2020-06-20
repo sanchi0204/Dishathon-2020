@@ -37,7 +37,7 @@
         android:id="@+id/actv"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:completionHint="Select a country"
+        android:completionHint="Select a show"
         android:completionThreshold="1"
         android:dropDownAnchor="@id/text_view_shows"
         android:hint="@string/search"

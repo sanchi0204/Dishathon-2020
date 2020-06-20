@@ -4,20 +4,28 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+import java.util.Locale;
+
 public class Search extends AppCompatActivity {
 
-ImageView sort;
+ImageView mic;
+    AutoCompleteTextView text;
+
 Context context = this;
 
     @Override
@@ -65,28 +73,51 @@ Context context = this;
             }
         });
 
-        sort = findViewById(R.id.mic);
-        sort.setOnClickListener(new View.OnClickListener() {
+        mic = findViewById(R.id.mic);
+        mic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ChipDialog();
+                SpeechToText(view);
             }
         });
     }
 
-    private void ChipDialog() {
-        final Dialog dialog = new Dialog(context);
-        dialog.setContentView(R.layout.chip_layout);
-      //  Button dialogButton = dialog.findViewById(R.id.btn_rate);
-        // if button is clicked, close the custom dialog
-//        dialogButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                dialog.dismiss();
-//            }
-//        });
-        dialog.show();
+    private void SpeechToText(View view) {
+//        final Dialog dialog = new Dialog(context);
+//        dialog.setContentView(R.layout.chip_layout);
+//      //  Button dialogButton = dialog.findViewById(R.id.btn_rate);
+//        // if button is clicked, close the custom dialog
+////        dialogButton.setOnClickListener(new View.OnClickListener() {
+////            @Override
+////            public void onClick(View v) {
+////                dialog.dismiss();
+////            }
+////        });
+//        dialog.show();
 
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(intent, 10);
+        } else {
+            Toast.makeText(this, "Your Device Don't Support Speech Input", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 10) {
+            if (resultCode == RESULT_OK && data != null) {
+                ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                assert result != null;
+                text.setText(result.get(0));
+            }
+        }
     }
 
 
