@@ -13,39 +13,40 @@
     <string name="search">Search</string>
     <string name="more">More</string>
     <string name="text_creators">Watcho Creators</string>
-    <string name="review">Review</string>
-    <string name="congrats">Congratulations!</string>
-    <string name="you_earned">You earned a coin</string>
-    <string name="add_a_review">Rate or Review to earn more.</string>
-    <string name="thanku">Thank you</string>
-    <string name="we_value">We value your reviews</string>
-    <string name="rate">RATE</string>
-    <string name="cancel">@android:string/cancel</string>
-    <string name="submit">SUBMIT</string>
-    <string name="action">Action</string>
-    <string name="biopic">Biopic</string>
-    <string name="chat_shows">Chat Shows</string>
-    <string name="comedy">Comedy</string>
-    <string name="crime">Crime</string>
-    <string name="documentary">Documentary</string>
-    <string name="drama">Drama</string>
-    <string name="family">Family</string>
-    <string name="horror">Horror</string>
-    <string name="kids">Kids</string>
-    <string name="lifestyle">Lifestyle</string>
-    <string name="reality">Reality</string>
-    <string name="romance">Romance</string>
-    <string name="science">Science</string>
-    <string name="sports">Sports</string>
-    <string name="thriller">Thriller</string>
-    <string name="vlog">Vlog</string>
-    <string name="genre">Genre</string>
+    <string name="choose">Choose</string>
+    <string name="review" translatable="false">Review</string>
+    <string name="congrats" translatable="false">Congratulations!</string>
+    <string name="you_earned" translatable="false">You earned a coin</string>
+    <string name="add_a_review" translatable="false">Rate or Review to earn more.</string>
+    <string name="thanku" translatable="false">Thank you</string>
+    <string name="we_value" translatable="false">We value your reviews</string>
+    <string name="rate" translatable="false">RATE</string>
+    <string name="cancel" translatable="false">@android:string/cancel</string>
+    <string name="submit" translatable="false">SUBMIT</string>
+    <string name="action" translatable="false">Action</string>
+    <string name="biopic" translatable="false">Biopic</string>
+    <string name="chat_shows" translatable="false">Chat Shows</string>
+    <string name="comedy" translatable="false">Comedy</string>
+    <string name="crime" translatable="false">Crime</string>
+    <string name="documentary" translatable="false">Documentary</string>
+    <string name="drama" translatable="false">Drama</string>
+    <string name="family" translatable="false">Family</string>
+    <string name="horror" translatable="false">Horror</string>
+    <string name="kids" translatable="false">Kids</string>
+    <string name="lifestyle" translatable="false">Lifestyle</string>
+    <string name="reality" translatable="false">Reality</string>
+    <string name="romance" translatable="false">Romance</string>
+    <string name="science" translatable="false">Science</string>
+    <string name="sports" translatable="false">Sports</string>
+    <string name="thriller" translatable="false">Thriller</string>
+    <string name="vlog" translatable="false">Vlog</string>
+    <string name="genre" translatable="false">Genre</string>
     <string name="language">Language</string>
     <string name="hindi">Hindi</string>
     <string name="english">English</string>
     <string name="tamil">Tamil</string>
     <string name="kannada">Kannada</string>
-    <string name="sms_msg">Download the Watcho App now to watch quality shows and showcase your talent.
+    <string name="sms_msg" translatable="false">Download the Watcho App now to watch quality shows and showcase your talent.
     \n Use code WATCHO1234 to join and earn coins.</string>
 
 
@@ -69,62 +70,63 @@
     </string-array>
 
 
-    <string name="premium">Premium</string>
-    <string name="shows">Shows</string>
-    <string name="channels">Channels</string>
-    <string name="news">News</string>
-    <string name="spotlight">Spotlight</string>
-    <string name="customer_support">Customer Support</string>
-    <string name="friends">My Friends</string>
-    <string name="nothing_to_show">Nothing to Show</string>
-    <string name="download_fav">Download shows to watch them offline</string>
-    <string name="buy">Buy Premium</string>
-    <string name="cast">Broadcast</string>
-    <string name="user">User</string>
-    <string name="pay_premium">Pay for Premium content</string>
-    <string name="ott">OTT</string>
-    <string name="user_login">User Login</string>
-    <string name="split_screen">Split Screen</string>
-    <string name="my_room">My Room</string>
+    <string name="premium" translatable="false">Premium</string>
+    <string name="shows" translatable="false">Shows</string>
+    <string name="channels" translatable="false">Channels</string>
+    <string name="news" translatable="false">News</string>
+    <string name="spotlight" translatable="false">Spotlight</string>
+    <string name="customer_support" translatable="false">Customer Support</string>
+    <string name="friends" translatable="false">My Friends</string>
+    <string name="nothing_to_show" translatable="false">Nothing to Show</string>
+    <string name="download_fav" translatable="false">Download shows to watch them offline</string>
+    <string name="buy" translatable="false">Buy Premium</string>
+    <string name="cast" translatable="false">Broadcast</string>
+    <string name="user" translatable="false">User</string>
+    <string name="pay_premium" translatable="false">Pay for Premium content</string>
+    <string name="ott" translatable="false">OTT</string>
+    <string name="user_login" translatable="false">User Login</string>
+    <string name="split_screen" translatable="false">Split Screen</string>
+    <string name="my_room" translatable="false">My Room</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="four_thieves">4 Thieves</string>
-    <string name="invite_frnds">Invite Friends</string>
-    <string name="cont_num">Contact Number</string>
-    <string name="select_cont">Select Contacts</string>
-    <string name="enter_count">Enter Count</string>
-    <string name="send_sms">SMS</string>
-    <string name="whatsapp">Whatsapp</string>
-    <string name="invite_">Invite</string>
-    <string name="invite_1">Invite your friends and earn coins</string>
-    <string name="add_video">Add Video</string>
-    <string name="change_lang">Change Language</string>
-    <string name="see_what">See what others have to say!</string>
-    <string name="enter_query">Enter your query here</string>
-    <string name="add">Add</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="four_thieves" translatable="false">4 Thieves</string>
+    <string name="invite_frnds" translatable="false">Invite Friends</string>
+    <string name="cont_num" translatable="false">Contact Number</string>
+    <string name="select_cont" translatable="false">Select Contacts</string>
+    <string name="enter_count" translatable="false">Enter Count</string>
+    <string name="send_sms" translatable="false">SMS</string>
+    <string name="whatsapp" translatable="false">Whatsapp</string>
+    <string name="invite_" translatable="false">Invite</string>
+    <string name="invite_1" translatable="false">Invite your friends and earn coins</string>
+    <string name="add_video" translatable="false">Add Video</string>
+    <string name="change_lang" translatable="false">Change Language</string>
+    <string name="see_what" translatable="false">See what others have to say!</string>
+    <string name="enter_query" translatable="false">Enter your query here</string>
+    <string name="add" translatable="false">Add</string>
 
-    <string name="user_1">Radhika Bawa</string>
-    <string name="user_2">Jayansh Jain</string>
-    <string name="user_3">Vihan Bhalla</string>
-    <string name="user_4">User</string>
+    <string name="user_1" translatable="false">Radhika Bawa</string>
+    <string name="user_2" translatable="false">Jayansh Jain</string>
+    <string name="user_3" translatable="false">Vihan Bhalla</string>
+    <string name="user_4" translatable="false">User</string>
 
-    <string name="ans_1">The content is geo-restricted and available only in India.</string>
-    <string name="ans_2">We have ABR enabled on Watcho, due to bandwidth it auto-adjusts and play only audio. Please connect with Wifi or use the application in better network reception</string>
-    <string name="ans_3"> It takes couple of minutes for the system to process and enable the entitlements.</string>
-    <string name="ans_4"> </string>
+    <string name="ans_1" translatable="false">The content is geo-restricted and available only in India.</string>
+    <string name="ans_2" translatable="false">We have ABR enabled on Watcho, due to bandwidth it auto-adjusts and play only audio. Please connect with Wifi or use the application in better network reception</string>
+    <string name="ans_3" translatable="false"> It takes couple of minutes for the system to process and enable the entitlements.</string>
+    <string name="ans_4" translatable="false"> </string>
 
-    <string name="q_1">Unable to play content in our region.</string>
-    <string name="q_2">Video is not playing, only black screen is displaying with the audio</string>
-    <string name="q_3">Paid for subscription but the content is not playing</string>
-    <string name="q_4"> </string>
-    <string name="write_msg">Write your message here</string>
-    <string name="send">Send</string>
-    <string name="this_is_your_10th_video_and_your_rank_is_4">This is your 10th video and your rank is 4!</string>
-    <string name="upload_more_to_improve_rank">Upload more to improve rank!!</string>
-    <string name="happy_creating">Happy Creating!</string>
-    <string name="add_frnds">Add Friends</string>
-    <string name="sort">Sort</string>
+    <string name="q_1" translatable="false">Unable to play content in our region.</string>
+    <string name="q_2" translatable="false">Video is not playing, only black screen is displaying with the audio</string>
+    <string name="q_3" translatable="false">Paid for subscription but the content is not playing</string>
+    <string name="q_4" translatable="false"> </string>
+    <string name="write_msg" translatable="false">Write your message here</string>
+    <string name="send" translatable="false">Send</string>
+    <string name="this_is_your_10th_video_and_your_rank_is_4" translatable="false">This is your 10th video and your rank is 4!</string>
+    <string name="upload_more_to_improve_rank" translatable="false">Upload more to improve rank!!</string>
+    <string name="happy_creating" translatable="false">Happy Creating!</string>
+    <string name="add_frnds" translatable="false">Add Friends</string>
+    <string name="sort" translatable="false">Sort</string>
+    <string name="watch_list">WatchList</string>
 
 
 </resources>

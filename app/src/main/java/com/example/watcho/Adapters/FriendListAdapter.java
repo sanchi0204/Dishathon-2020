@@ -1,6 +1,7 @@
 package com.example.watcho.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.watcho.R;
+import com.example.watcho.Showcase;
 
 import java.util.ArrayList;
 
@@ -51,7 +53,7 @@ public class FriendListAdapter extends RecyclerView.Adapter<FriendListAdapter.My
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               //
+                context.startActivity(new Intent(context, Showcase.class));
             }
         });
 

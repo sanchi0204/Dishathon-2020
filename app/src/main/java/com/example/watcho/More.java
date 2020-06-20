@@ -76,9 +76,9 @@ public class More extends AppCompatActivity {
 
     private void Chooser() {
 
-        final String[] listItems = {"English", "Hindi", "Urdu", "Punjabi"};
+        final String[] listItems = {getString(R.string.english), getString(R.string.hindi), getString(R.string.tamil), getString(R.string.kannada)};
         AlertDialog.Builder builder =new AlertDialog.Builder(More.this);
-        builder.setTitle("Choose");
+        builder.setTitle(getString(R.string.choose));
         builder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

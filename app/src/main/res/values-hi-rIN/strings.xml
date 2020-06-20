@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Watcho</string>
+    <string name="app_name">"वॉचो "</string>
+    <string name="top_10_shows">वॉचो पर शीर्ष 10 शो</string>
+    <string name="text_watcho_originals">वॉचो मूल</string>
+    <string name="watcho_spotlight">वॉचो स्पॉटलाइट</string>
+    <string name="text_musical_videos">वॉचो संगीत वीडियो</string>
+    <string name="text_trailers">बॉलीवुड मूवी ट्रेलर</string>
+    <string name="text_plays">वॉचो प्ले</string>
+    <string name="text_dish_auditions">डिश टीवी ऑडिशन</string>
+    <string name="home">घर</string>
+    <string name="downloads">डाउनलोड</string>
+    <string name="browse">ब्राउज़</string>
+    <string name="search">खोज</string>
+    <string name="more">अधिक</string>
+    <string name="text_creators">वॉचो निर्माता</string>
+    <string name="language">भाषा</string>
+    <string name="hindi">हिन्दी</string>
+    <string name="english">अंग्रेज़ी</string>
+    <string name="tamil">तामिल</string>
+    <string name="kannada">कन्नड़</string>
+    <string name="choose">चुनें</string>
 </resources>
