@@ -1,7 +1,10 @@
 package com.example.watcho;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,10 +16,23 @@ import android.widget.RatingBar;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Videoview extends AppCompatActivity {
     final Context context = this;
+    final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,13 +88,49 @@ public class Videoview extends AppCompatActivity {
             public void onClick(View v) {
                 String rating = String.valueOf(ratingBar.getRating());
                 String review = Review.getText().toString();
-                        //add to database
-                openDialogThanks();
+                addToDb(rating,review);
+
                 dialog.dismiss();
             }
         });
         dialog.show();
     }
+
+    private void addToDb(String rating, String review) {
+        final ProgressDialog progressDialog=new ProgressDialog(this);
+        progressDialog.setTitle("Submitting");
+        progressDialog.setMessage("Please Wait");
+        progressDialog.show();
+
+        Calendar c = Calendar .getInstance();
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat df = new SimpleDateFormat("HH:mm dd-MM-yyyy");
+        String formattedDate = df.format(c.getTime());
+
+        Map<String,Object> Rating=new HashMap<>();
+        Rating.put("rating",rating);
+        Rating.put("review",review);
+        Rating.put("time", formattedDate);
+        Rating.put("name","User");
+
+        db.collection("Reviews")
+                .add(Rating)
+                .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentReference> task) {
+                        progressDialog.dismiss();
+                        openDialogThanks();
+
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+            progressDialog.dismiss();
+                Toast.makeText(context, e.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
 
     public void openDialogThanks() {
 
@@ -86,6 +138,9 @@ public class Videoview extends AppCompatActivity {
         dialog.setContentView(R.layout.custom_thanks);
 
         dialog.show();
+        dialog.dismiss();
+        Intent intent=new Intent(Videoview.this,ShowingReviews.class);
+        startActivity(intent);
     }
 
 }

@@ -28,6 +28,7 @@
             </intent-filter>
         </service>
         <activity android:name=".InviteFriends"/>
+        <activity android:name=".ShowingReviews"/>
         <activity android:name=".Add_friends" />
         <activity
             android:name=".Videoview"

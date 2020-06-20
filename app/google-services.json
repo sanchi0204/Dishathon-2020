@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "718720088741",
+    "firebase_url": "https://watcho-2891f.firebaseio.com",
+    "project_id": "watcho-2891f",
+    "storage_bucket": "watcho-2891f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718720088741:android:520a1428fc7d2b72b12b4c",
+        "android_client_info": {
+          "package_name": "com.example.watcho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718720088741-6om526lmoiqk9njlhj21q5immbgq7p7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbLJeR9JcnbwlZYmAlLqsPwUnYPDeaBNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718720088741-6om526lmoiqk9njlhj21q5immbgq7p7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
