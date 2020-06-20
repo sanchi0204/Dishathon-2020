@@ -4,17 +4,27 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.example.watcho.Adapters.CustomerAdapter;
+import com.example.watcho.Adapters.FriendListAdapter;
 import com.example.watcho.AddFriends;
+import com.example.watcho.FriendList;
 import com.example.watcho.InviteFriends;
 import com.example.watcho.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
 
 
 /**
@@ -82,15 +92,35 @@ public class Friends extends Fragment {
 //        });
         View view =  inflater.inflate(R.layout.fragment_friends, container, false);
 
-        ImageView img;
-        img = view.findViewById(R.id.friends_img);
-        img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getContext(), InviteFriends.class);
-                startActivity(i);
-            }
-        });
+        RecyclerView frnd_list;
+            FriendList friendList = new FriendList();
+        assert friendList != null;
+        int length = friendList.getName().size();
+
+        ArrayList<String> name = new ArrayList<String>(length);
+        ArrayList<String> gen1 = new ArrayList<String>(length);
+        ArrayList<String> gen2 = new ArrayList<String>(length);
+        ArrayList<String> gen3 = new ArrayList<String>(length);
+
+
+   for(int i=0;i<length;i++)
+   {
+       name.add(i,friendList.getName(i));
+       gen1.add(i,friendList.getGen1(i));
+       gen2.add(i,friendList.getGen2(i));
+       gen3.add(i,friendList.getGen3(i));
+
+   }
+
+        frnd_list = view.findViewById(R.id.recycler_friends);
+
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Objects.requireNonNull(getActivity()).getApplicationContext());
+        frnd_list.setLayoutManager(linearLayoutManager);
+
+        final FriendListAdapter friendListAdapter = new FriendListAdapter(name,gen1, gen2,gen3, getContext());
+        frnd_list.setAdapter(friendListAdapter);
+
 
         Button invite_frnds;
         Button add_frnds;

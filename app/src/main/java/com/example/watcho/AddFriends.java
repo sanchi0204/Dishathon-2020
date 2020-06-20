@@ -50,7 +50,7 @@ public class AddFriends extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(AddFriends.this);
         users.setLayoutManager(linearLayoutManager);
 
-        final FriendsAdapter friendsAdapter = new FriendsAdapter(Name,genre1,genre2,genre3,img,this);
+        final FriendsAdapter friendsAdapter = new FriendsAdapter(Name,genre1,genre2,genre3,this);
         users.setAdapter(friendsAdapter);
 
     }

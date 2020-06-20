@@ -121,6 +121,7 @@
     <string name="write_msg">Write your message here</string>
     <string name="send">Send</string>
     <string name="add_frnds">Add Friends</string>
+    <string name="sort">Sort</string>
 
 
 </resources>
