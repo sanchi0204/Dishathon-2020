@@ -16,7 +16,7 @@
     <TextView
         android:id="@+id/user_name"
         android:text="Name"
-        android:textSize="18"
+        android:textSize="18sp"
         android:textStyle="normal"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent"

@@ -120,6 +120,9 @@
     <string name="q_4"> </string>
     <string name="write_msg">Write your message here</string>
     <string name="send">Send</string>
+    <string name="this_is_your_10th_video_and_your_rank_is_4">This is your 10th video and your rank is 4!</string>
+    <string name="upload_more_to_improve_rank">Upload more to improve rank!!</string>
+    <string name="happy_creating">Happy Creating!</string>
 
 
 </resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/black"
+    app:cardElevation="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:paddingBottom="30dp">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/thank_gif"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/done" />
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/this_is_your_10th_video_and_your_rank_is_4"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_more_to_improve_rank"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/grey_w"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/sub_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/happy_creating"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/grey_w"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
