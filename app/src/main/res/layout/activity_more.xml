@@ -8,6 +8,21 @@
     tools:context=".More"
     android:background="@color/black">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:text="@string/change_lang"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:id="@+id/btn_change_lang"/>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"

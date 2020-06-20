@@ -98,5 +98,7 @@
     <string name="invite_">Invite</string>
     <string name="invite_1">Invite your friends and earn coins</string>
     <string name="add_video">Add Video</string>
+    <string name="change_lang">Change Language</string>
+    <string name="see_what">See what others have to say!</string>
 
 </resources>
