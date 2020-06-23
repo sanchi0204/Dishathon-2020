@@ -118,13 +118,13 @@ public class Friends extends Fragment {
 //   }
 
         Name = new ArrayList<>(Arrays.asList("Pranay K.",
-                "Shreya Singh", "Sameer Khan"));
+                "Shreya Singh"));
         gen1 = new ArrayList<>(Arrays.asList("English",
-                "Life", "Science"));
+                "Life"));
         gen2 = new ArrayList<>(Arrays.asList("Kannada",
-                "Vlog", "Documentary"));
+                "Vlog"));
         gen3 = new ArrayList<>(Arrays.asList("Tamil",
-                "Drama", "Thrill"));
+                "Drama"));
         frnd_list = view.findViewById(R.id.recycler_friends);
 
 

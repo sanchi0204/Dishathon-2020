@@ -100,7 +100,7 @@
     <string name="invite_" translatable="false">Invite</string>
     <string name="invite_1" translatable="false">Invite your friends and earn coins</string>
     <string name="add_video" translatable="false">Add Video</string>
-    <string name="change_lang" translatable="false">Change Language</string>
+    <string name="change_lang">Change Language</string>
     <string name="see_what" translatable="false">See what others have to say!</string>
     <string name="enter_query" translatable="false">Enter your query here</string>
     <string name="add" translatable="false">Add</string>
@@ -126,7 +126,7 @@
     <string name="happy_creating" translatable="false">Happy Creating!</string>
     <string name="add_frnds" translatable="false">Add Friends</string>
     <string name="sort" translatable="false">Sort</string>
-    <string name="watch_list">WatchList</string>
+    <string name="watch_list" translatable="false">WatchList</string>
 
 
 </resources>

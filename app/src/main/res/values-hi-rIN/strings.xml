@@ -20,4 +20,5 @@
     <string name="tamil">तामिल</string>
     <string name="kannada">कन्नड़</string>
     <string name="choose">चुनें</string>
+    <string name="change_lang">भाषा बदलो</string>
 </resources>

@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="500dp"
+    android:layout_height="match_parent"
     android:background="@color/black"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+<LinearLayout
+    android:layout_weight="1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
-
 <TextView
     android:id="@+id/l1"
     android:layout_width="wrap_content"
@@ -20,18 +32,8 @@
     android:fontFamily="@font/roboto_medium"
     />
 
-    <LinearLayout
-        android:id="@+id/l2"
-        android:layout_below="@+id/l1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-       >
+
         <CheckBox
-          android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/action"
@@ -41,7 +43,6 @@
            />
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/biopic"
@@ -50,27 +51,14 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/chat_shows"
             android:textSize="18sp"
             android:textColor="@color/white"
             android:buttonTint="@color/yellow"/>
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/l3"
-        android:layout_below="@+id/l2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        >
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/comedy"
@@ -79,7 +67,6 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/crime"
@@ -88,28 +75,14 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/documentary"
             android:textSize="18sp"
             android:textColor="@color/white"
             android:buttonTint="@color/yellow"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/l4"
-        android:layout_below="@+id/l3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        >
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/drama"
@@ -118,7 +91,6 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/family"
@@ -127,27 +99,14 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/horror"
             android:textSize="18sp"
             android:textColor="@color/white"
             android:buttonTint="@color/yellow"/>
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/l5"
-        android:layout_below="@+id/l4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        >
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/kids"
@@ -156,7 +115,6 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lifestyle"
@@ -165,28 +123,14 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/reality"
             android:textSize="18sp"
             android:textColor="@color/white"
             android:buttonTint="@color/yellow"/>
-    </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/l6"
-            android:layout_below="@+id/l5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            >
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/romance"
@@ -195,7 +139,6 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/science"
@@ -204,19 +147,21 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sports"
             android:textSize="18sp"
             android:textColor="@color/white"
             android:buttonTint="@color/yellow"/>
-        </LinearLayout>
+</LinearLayout>
 
-
+<LinearLayout
+    android:layout_weight="1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
     <TextView
         android:id="@+id/l7"
-        android:layout_below="@+id/l6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -228,19 +173,7 @@
         android:fontFamily="@font/roboto_medium"
         />
 
-    <LinearLayout
-        android:id="@+id/l8"
-        android:layout_below="@+id/l7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        >
-
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hindi"
@@ -249,7 +182,6 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/english"
@@ -258,7 +190,6 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tamil"
@@ -267,20 +198,20 @@
             android:buttonTint="@color/yellow"/>
 
         <CheckBox
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/kannada"
             android:textSize="18sp"
             android:textColor="@color/white"
             android:buttonTint="@color/yellow"/>
-    </LinearLayout>
+</LinearLayout>
 
+</LinearLayout>
     <Button
-        android:layout_alignParentBottom="true"
         android:id="@+id/btn_sort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:layout_gravity="bottom"
@@ -291,4 +222,5 @@
         android:textColor="@color/white"
         android:layout_marginBottom="30dp"
         android:textAllCaps="true"/>
-</RelativeLayout>
+    </LinearLayout>
+</ScrollView>
