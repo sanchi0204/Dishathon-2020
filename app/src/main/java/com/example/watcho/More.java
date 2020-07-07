@@ -46,7 +46,9 @@ public class More extends AppCompatActivity {
 
                 switch (item.getItemId())
                 {
-                    case R.id.more: return true;
+                    case R.id.more:
+                        return true;
+
                     case R.id.downloads:
                         startActivity(new Intent(getApplicationContext(), Downloads.class));
                         overridePendingTransition(0,0);
